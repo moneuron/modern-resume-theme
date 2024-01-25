@@ -3,7 +3,7 @@
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12">
       <div class="row clearfix layout layout-{{item.layout | default: 'left'}} border-{{item.border | default: 'no'}}">
         <div class="details">
-          <h4 id="{{ item.title | slugify }}" style="font-size: 1.6em;">{{ item.title }}</h4>
+          <h4 id="{{ item.title | slugify }}" style="font-size: 1.9em;">{{ item.title }}</h4>
           {%- if item.sub_title -%}<p><b>{{ item.sub_title }}</b></p>{%- endif -%}
           {%- if item.caption -%}<p>{{ item.caption }}</p>{%- endif -%}
 
@@ -16,7 +16,7 @@
           <p class="no-print aditional-links">
             {% for link in item.additional_links %}
               {% include a.html href=link.url class="" %}
-                <i class="{{ link.icon }}" title="{{ link.title | escape }}" style="font-size: 0.7em;"> {{ link.title | escape }}</i>
+                <i class="{{ link.icon }}" title="{{ link.title | escape }}" style="font-size: 0.75em;"> {{ link.title | escape }}</i>
               </a>
             {% endfor %}
           </p>

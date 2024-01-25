@@ -23,7 +23,7 @@
     "@type": "Person",
     "name": "{{ site.name }}",
     "url": "https://{{ meta_url }}/",
-    "image": "{{ meta_img }}",
+    "image": "url({{ site.about_profile_image | relative_url }})",
     "sameAs": [
       "https://orcid.org/{{ site.orcid_username | escape }}",
       "https://github.com/{{ site.github_username| cgi_escape | escape }}"
@@ -33,8 +33,6 @@
   </script>
 
   <title>{{ site.name }} | {{ site.title }}</title>
-  
-  {%- seo title=false -%}
 
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
   <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | default: '/assets/favicon.ico' | relative_url }}">

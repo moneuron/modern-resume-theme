@@ -14,7 +14,7 @@
       <p class="no-print aditional-links">
         {% for link in item.additional_links %}
           {% include a.html href=link.url class="" %}
-            {{ link.title | strip | markdownify }} <i class="{{ link.icon }}" title="{{ link.title | escape }}"></i>
+            <i class="{{ link.icon }}" title="{{ link.title | escape }}">link.title </i>
           </a>
         {% endfor %}
       </p>

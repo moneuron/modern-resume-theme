@@ -23,7 +23,7 @@
     "@type": "Person",
     "name": "{{ site.name }}",
     "url": "https://{{ site.meta_url }}/",
-    "image": "url({{ site.about_profile_image | relative_url }})",
+    "image": "{{ site.meta_img }}",
     "sameAs": [
       "https://orcid.org/{{ site.orcid_username | escape }}",
       "https://github.com/{{ site.github_username| cgi_escape | escape }}"

@@ -39,6 +39,13 @@
             </a>
           </li>
         {%- endif -%}
+        {%- if site.X_username -%}
+          <li>
+            <a target="_blank" href="https://twitter.com/{{ site.X_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
+              <i class="fas fa-brands fa-x-twitter" title="X"></i>
+            </a>
+          </li>
+        {%- endif -%}
         {% for link in site.additional_links %}
           <li>
             {% include a.html href=link.url class="button button--sacnite button--round-l" %}

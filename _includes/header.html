@@ -23,24 +23,10 @@
             </a>
           </li>
         {%- endif -%}
-        {%- if site.orcid_username -%}
-          <!--li>
-            <a target="_blank" href="https://orcid.org/{{ site.orcid_username | escape }}" class="button button--sacnite button--round-l">
-              <i class="fas fa-brands fa-orcid" title="ORCiD"></i>
-            </a>
-          </li-->
-        {%- endif -%}
         {%- if site.github_username -%}
           <li>
             <a target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
               <i class="fas fa-brands fa-github" title="GitHub"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if site.X_username -%}
-          <li>
-            <a target="_blank" href="https://twitter.com/{{ site.X_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fas fa-brands fa-x-twitter" title="X"></i>
             </a>
           </li>
         {%- endif -%}
@@ -59,16 +45,6 @@
           </li>
         {% endfor %}
       </ul>
-      {%- if site.phone -%}
-        <p>
-          {{ site.phone_title | default: "Phone" }}: {{ site.phone | escape }}
-        </p>
-      {%- endif -%}
-      {%- if site.website -%}
-        <p>
-          {{ site.website_title | default: "Web" }}: {% include a.html href=site.website %}{{ site.website | escape }}</a>
-        </p>
-      {%- endif -%}
     </div>
   </div>
 </div>

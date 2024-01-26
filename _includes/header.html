@@ -26,16 +26,16 @@
           </li>
         {%- endif -%}
         {%- if site.orcid_username -%}
-          <li>
+          <!--li>
             <a target="_blank" href="https://orcid.org/{{ site.orcid_username | escape }}" class="button button--sacnite button--round-l">
               <i class="fas fa-brands fa-orcid" title="ORCiD"></i>
             </a>
-          </li>
+          </li-->
         {%- endif -%}
         {%- if site.github_username -%}
           <li>
             <a target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fas fa-solid fa-code-merge" title="GitHub"></i>
+              <i class="fas fa-brands fa-github" title="GitHub"></i>
             </a>
           </li>
         {%- endif -%}
@@ -43,6 +43,13 @@
           <li>
             <a target="_blank" href="https://twitter.com/{{ site.X_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
               <i class="fas fa-brands fa-x-twitter" title="X"></i>
+            </a>
+          </li>
+        {%- endif -%}
+        {%- if site.PDF -%}
+          <li>
+            <a target="_blank" href="url({{ site.PDF | relative_url }})" class="button button--sacnite button--round-l">
+              <i class="fas fa-solid fa-file-pdf" title="CV"></i>
             </a>
           </li>
         {%- endif -%}

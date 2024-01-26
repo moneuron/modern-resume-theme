@@ -33,7 +33,7 @@
     "url": "https://{{ site.meta_url }}/",
     "image": "{{ site.meta_img }}",
     "sameAs": [
-      "https://orcid.org/{{ site.orcid_username | escape }}",
+      "https://scholar.google.com/citations?user={{ site.googlescholar_username| escape }}",
       "https://github.com/{{ site.github_username| cgi_escape | escape }}"
     ],
     "jobTitle": "{{ site.title }}"

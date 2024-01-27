@@ -32,7 +32,7 @@
         {%- endif -%}
         {%- if site.PDF -%}
           <li>
-            <a target="_blank" href="https://{{ site.meta_url | escape }}/{{ site.PDF }}" class="button button--sacnite button--round-l">
+            <a target="_blank" href="https://{{ site.meta_url | escape }}{{ site.PDF | relative_url }}" class="button button--sacnite button--round-l">
               <i class="fas fa-solid fa-file-pdf" title="CV"></i>
             </a>
           </li>

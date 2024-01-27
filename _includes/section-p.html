@@ -1,7 +1,7 @@
 {% for item in include.content %}
   <div class="row clearfix item">
     <div class="col-xs-12 col-sm-5 col-md-6 no-print">
-      <span class="pub-img" style="background-image: {{ item.image }}"/>
+      <span class="pub-img" style="background-image: url({{ item.image | relative_url }})"/>
       </div>
     <div class="col-xs-12 col-sm-7 col-md-6 col-print-12">
       {%- if item.quote -%}

@@ -23,11 +23,6 @@
             {% include {{ section.layout | prepend: "section-" | append: ".html" }} content=section.content %}
           </div>
         {% endfor %}
-
-      {%- if site.data.publications.size > 0 -%}
-        {%- include projects.html -%}
-      {%- endif -%}  
-      
       {% else %}
         {%- include v1/default.html -%}
       {%- endif -%}

@@ -1,12 +1,15 @@
-<div class="row clearfix item">
-  <div class="col-xs-12 col-sm-5 col-md-6 no-print">
-    <span class="pub-img" style="background-image: url({{ include.content.image | relative_url }})" />
+<div class="container projects-container">
+  {% for project in site.data.projects %}
+    <div class="row clearfix project">
+      <div class="col-xs-12 col-sm-5 col-md-6 no-print">
+        <span class="pub-img" style="background-image: url({{ project.image | relative_url }})"/>
+        </div>
+      <div class="col-xs-12 col-sm-7 col-md-6 col-print-12">
+        {%- if project.quote -%}
+          <p class="quote">{{ project.quote }}</p>
+        {%- endif -%}
+        {{ project.description | strip | markdownify }}
+      </div>
     </div>
-  <div class="col-xs-12 col-sm-7 col-md-6 col-print-12">
-    {%- if include.content.quote -%}
-      <p class="quote">{{ item.quote }}</p>
-    {%- endif -%}
-    {{ include.content.description | strip | markdownify }}
-  </div>
+  {% endfor %}
 </div>
-

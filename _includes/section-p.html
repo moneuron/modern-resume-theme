@@ -9,8 +9,7 @@
         {%- endif -%}
         {{ project.description | strip | markdownify }}
         {%- if project.icon and project.icon_title -%}
-          <br>
-          <i class="{{ project.icon }}" title="{{ project.icon_title| escape }}" style="font-size: 0.75em;"> {{ project.icon_title | escape }}</i>
+          <i class="{{ project.icon }}" title="{{ project.icon_title| escape }}"> {{ project.icon_title | escape }}</i>
         {%- endif -%}
       </div>
     </div>

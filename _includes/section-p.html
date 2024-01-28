@@ -8,8 +8,10 @@
           <p class="quote">{{ project.quote }}</p>
         {%- endif -%}
         {{ project.description | strip | markdownify }}
-        {%- if project.icon and project.icon_title -%}
-          <i class="{{ project.icon }}" title="{{ project.icon_title| escape }}"> {{ project.icon_title | escape }}</i>
+        {%- if project.icon and project.icon_title and project.icon_url -%}
+          {% include a.html href=project.icon_url class="" %}
+                <i class="{{ project.icon }}" title="{{ project.icon_title| escape }}"> {{ project.icon_title | escape }}</i>
+              </a>
         {%- endif -%}
       </div>
     </div>

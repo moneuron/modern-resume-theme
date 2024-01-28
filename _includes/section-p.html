@@ -4,8 +4,8 @@
         <span class="pub-img" style="background-image: url({{ project.image | relative_url }})"/>
         </div>
       <div class="col-xs-12 col-sm-7 col-md-6 col-print-12">
-        {% include a.html href=project.icon_url class="" %} <i class="{{ project.icon }}" title="{{ project.icon_title| escape }}"></i> </a>
         {{ project.description | strip | markdownify }}
+        {% include a.html href=project.icon_url class="" %} <i class="{{ project.icon }}" title="{{ project.icon_title| escape }}">project.icon</i> </a>
       </div>
     </div>
 {% endfor %}

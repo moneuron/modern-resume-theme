@@ -1,7 +1,7 @@
 {% for item in include.content %}
   <div class="row clearfix layout layout-left">
     <div class="col-xs-12 col-print-20 details">
-        <font size="3">{{ item.author_list | strip | markdownify }} <i>{{ item.title | strip | escape }}</i> {{ item.journal | strip | escape }}       <a href="{{ item.link }}" target="_blank"><i class="fas fa-solid fa-arrow-up-right-from-square" aria-hidden="true" title="link to publication"></i></a>
+        <font size="3">{{ item.author_list | strip | escape | markdownify }} <i>{{ item.title | strip | escape }}</i> {{ item.journal | strip | escape }}       <a href="{{ item.link }}" target="_blank"><i class="fas fa-solid fa-arrow-up-right-from-square" aria-hidden="true" title="link to publication"></i></a>
  </font>  
     </div>
   </div>

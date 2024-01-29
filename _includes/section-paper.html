@@ -1,8 +1,0 @@
-{% for item in include.content %}
-  <div class="row clearfix layout layout-left">
-    <div class="col-xs-12 col-print-20 details">
-        <font size="3">{{ item.author_list | escape | strip }} <i>{{ item.title | escape | strip }}</i> {{ item.journal | escape | strip }} <a href="{{ item.link }}" target="_blank"><i class="fas fa-solid fa-arrow-up-right-from-square" aria-hidden="true" title="link to publication"></i></a>
- </font>  
-    </div>
-  </div>
-{% endfor %}

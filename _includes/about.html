@@ -4,7 +4,7 @@
   <div class="row clearfix">
     <div class="{{ 'col-xs-12 ' }}">
       {%- if site.last_updated_time != null -%}
-        <i style="font-size: 12px;">(Last Updated: {{ site.last_updated_time }})</i>
+        <i style="font-size: 12px;">(Last Update: {{ site.last_update }})</i>
       {%- endif -%}
       {{ site.about_content | strip | markdownify }}
     </div>

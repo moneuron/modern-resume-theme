@@ -33,24 +33,10 @@
         {%- if site.github_username -%}
           <li>
             <a target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fa-solid fa-code-branch" title="GitHub"></i>
-            </a> 
+              <i class="fa-brands fa-github" title="GitHub"></i>
+            </a>
           </li> 
         {%- endif -%}
-        {%- if site.PDF -%}
-          <li>
-            <a target="_blank" href="https://{{ site.meta_url | escape }}{{ site.PDF | relative_url }}" class="button button--sacnite button--round-l">
-              <i class="fa-regular fa-floppy-disk" title="CV"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {% for link in site.additional_links %}
-          <li>
-            {% include a.html href=link.url class="button button--sacnite button--round-l" %}
-              <i class="{{ link.icon }}" title="{{ link.title | escape }}"></i>
-            </a>
-          </li>
-        {% endfor %}
       </ul>
     </div>
   </div>

@@ -12,21 +12,21 @@
         {%- if site.email -%}
           <li>
             <a target="_blank" href="mailto:{{ site.email }}" class="button button--sacnite button--round-l">
-              <i class="fas fa-solid fa-envelope" title="Email"></i>
+              <i class="fa-solid fa-envelope" title="Email"></i>
             </a>
           </li>
         {%- endif -%}
         {%- if site.googlescholar_username -%}
           <li>
             <a target="_blank" href="https://scholar.google.com/citations?user={{ site.googlescholar_username| escape }}" class="button button--sacnite button--round-l">
-              <i class="fas fa-brands fa-google-scholar" title="Google Scholar"></i>
+              <i class="fa-brands fa-google-scholar" title="Google Scholar"></i>
             </a>
           </li>
         {%- endif -%}
         {%- if site.in_username -%}
           <li>
             <a target="_blank" href="www.linkedin.com/in/{{ site.in_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fas fa-brands fa-linkedin-in" title="LinkedIn"></i>
+              <i class="fa-brands fa-linkedin-in" title="LinkedIn"></i>
             </a>
           </li>
         {%- endif -%}
@@ -40,7 +40,7 @@
         {%- if site.PDF -%}
           <li>
             <a target="_blank" href="https://{{ site.meta_url | escape }}{{ site.PDF | relative_url }}" class="button button--sacnite button--round-l">
-              <i class="fas fa-solid fa-file-pdf" title="CV"></i>
+              <i class="fa-regular fa-floppy-disk" title="CV"></i>
             </a>
           </li>
         {%- endif -%}

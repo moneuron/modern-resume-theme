@@ -33,16 +33,16 @@
         {%- if site.X_username -%}
           <li>
             <a target="_blank" href="https://x.com/{{ site.X_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fa-brands fa-square-x-twitter" title="X"></i>
+              <i class="fa-brands fa-x-twitter" title="X"></i>
             </a>
           </li>
         {%- endif -%} 
         {%- if site.github_username -%}
           <li>
             <a target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fa-solid fa-code-merge" title="GitHub"></i>
+              <i class="fa-solid fa-folder-open" title="GitHub"></i>
             </a>
-          </li>
+          </li> 
         {%- endif -%}
         {%- if site.PDF -%}
           <li>

@@ -30,6 +30,13 @@
             </a>
           </li>
         {%- endif -%}
+        {%- if site.X_username -%}
+          <li>
+            <a target="_blank" href="https://x.com/{{ site.X_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
+              <i class="fa-brands fa-x-twitter" title="X"></i>
+            </a>
+          </li>
+        {%- endif -%}
         {%- if site.github_username -%}
           <li>
             <a target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">

@@ -2,7 +2,7 @@
     <div class="row clearfix project">
         <div class="col-xs-12 col-sm-12 col-md-12 col-print-12">
             {{ project.description | strip | markdownify }}
-            <a href="{{ project.url }}" target="_blank">{{ project.url }}</a>
+            <a href="{{ project.url }}" target="_blank" style="font-size: 1.2em;" >{{ project.url }}</a>
             <i class="fas fa-solid fa-arrow-up-right-from-square" title="{{ project.icon_title| escape }}" style="font-size: 1.2em;"></i>
         </div>
     </div>

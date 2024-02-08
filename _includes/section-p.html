@@ -1,10 +1,7 @@
 {% for project in include.content %}
-  <div class="row clearfix project">
-   <div class="col-xs-4 col-sm-3 col-md-2 no-print"> 
-      <span class="pub-img" style="background-image: url({{ project.image | relative_url }})"></span>
+<div class="row clearfix project">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-print-12">
+        {{ project.description | strip | markdownify }}<a href="{{ project.url }}" target="_blank"> <i class="fas fa-solid fa-arrow-up-right-from-square" title="{{ project.icon_title| escape }}"></i></a>
     </div>
-    <div class="col-xs-8 col-sm-9 col-md-10 col-print-12">
-      {{ project.description | strip | markdownify }}<a href="{{ project.url }}" target="_blank"> <i class="fas fa-solid fa-arrow-up-right-from-square" title="{{ project.icon_title| escape }}"></i></a>
-    </div>
-  </div>
+</div>
 {% endfor %}

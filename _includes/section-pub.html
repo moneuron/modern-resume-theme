@@ -1,7 +1,16 @@
-{% for item in include.content %}
-  <div class="row clearfix layout layout-left" style="margin-bottom: 10px;">
-    <div class="col-xs-12 col-print-20 details" style="margin-bottom: 0;">
-        <span style="font-size: 16px;">{{ item.authors | strip }} <i>{{ item.title | strip | escape }}</i> {{ item.journal | strip }} <a href="{{ item.link }}" target="_blank"><i class="fas fa-solid fa-arrow-up-right-from-square" title="link to publication"></i></a></span>  
+<div class="publication-container">
+  {% for item in include.content %}
+  <div class="publication">
+    <div class="publication-details">
+      <span class="authors">{{ item.authors | strip }}</span>
+      <i class="publication-title">{{ item.title | strip | escape }}</i>
+      <span class="journal">{{ item.journal | strip }}</span>
+      {% if item.link %}
+      <a href="{{ item.link }}" class="external-link" target="_blank" title="Link to publication">
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+      {% endif %}
     </div>
   </div>
-{% endfor %}
+  {% endfor %}
+</div>

@@ -5,24 +5,9 @@
       <div class="card">
         <div class="card-header">
           <h4>{{ item.title }}</h4>
-          {% if item.sub_title %}
-          <p class="subtitle">{{ item.sub_title }}</p>
-          {% endif %}
-          {% if item.caption %}
-          <p class="caption">{{ item.caption }}</p>
-          {% endif %}
-        </div>
-        <div class="card-body">
-          {% if item.quote %}
-          <blockquote>{{ item.quote }}</blockquote>
-          {% endif %}
-          <p>{{ item.description }}</p>
         </div>
         {% if item.link or item.additional_links %}
         <div class="card-footer">
-          {% if item.link %}
-          <a href="{{ item.link }}" class="btn btn-primary">{{ item.link_text | default: 'Certificate' }}</a>
-          {% endif %}
           {% if item.additional_links %}
           <ul class="additional-links">
             {% for link in item.additional_links %}

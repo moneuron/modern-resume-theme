@@ -1,33 +1,41 @@
-<div class="row">
-  {% for item in include.content %}
-    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12">
-      <div class="row clearfix layout layout-{{item.layout | default: 'left'}} border-{{item.border | default: 'no'}}">
-        <div class="details">
-          <h4 id="{{ item.title | slugify }}" style="font-size: 2.2em;">{{ item.title }}</h4>
-          {%- if item.sub_title -%}<p><b>{{ item.sub_title }}</b></p>{%- endif -%}
-          {%- if item.caption -%}<p>{{ item.caption }}</p>{%- endif -%}
-
-          {%- if item.link -%}
-            {% include a.html href=item.link class="link" %}
-              {%- if item.link_text -%}{{ item.link_text }}{%- else -%}{{ item.link }}{%- endif -%}
-            </a>
-          {%- endif -%}
-
-          <p class="no-print aditional-links">
+<div class="card-container">
+  <div class="row">
+    {% for item in include.content %}
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card">
+        <div class="card-header">
+          <h4>{{ item.title }}</h4>
+          {% if item.sub_title %}
+          <p><strong>{{ item.sub_title }}</strong></p>
+          {% endif %}
+          {% if item.caption %}
+          <p>{{ item.caption }}</p>
+          {% endif %}
+          {% if item.link %}
+          <a href="{{ item.link }}" class="btn btn-primary">{{ item.link_text | default: 'Read more' }}</a>
+          {% endif %}
+        </div>
+        <div class="card-body">
+          {% if item.quote %}
+          <blockquote>{{ item.quote }}</blockquote>
+          {% endif %}
+          <p>{{ item.description }}</p>
+        </div>
+        {% if item.additional_links %}
+        <div class="card-footer">
+          <ul class="additional-links">
             {% for link in item.additional_links %}
-              {% include a.html href=link.url class="" %}
-                <i class="fas fa-solid fa-arrow-up-right-from-square" title="{{ link.title | escape }}" style="font-size: 0.7em; text-transform: none;"> {{ link.title | escape }}</i>
+            <li>
+              <a href="{{ link.url }}" title="{{ link.title }}">
+                <i class="fas fa-external-link-alt"></i> {{ link.title }}
               </a>
+            </li>
             {% endfor %}
-          </p>
+          </ul>
         </div>
-        <div class="content">
-          {%- if item.quote -%}
-            <p>{{ item.quote }}</p>
-          {%- endif -%}
-          {{ item.description | strip | markdownify }}
-        </div>
+        {% endif %}
       </div>
     </div>
-  {% endfor %}
+    {% endfor %}
+  </div>
 </div>

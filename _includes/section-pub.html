@@ -1,7 +1,7 @@
 {% for item in include.content %}
   <div class="row clearfix layout layout-left" style="margin-bottom: 10px;">
     <div class="col-xs-12 col-print-20 details" style="margin-bottom: 0;">
-        <span style="font-size: 16px;">{{ item.authors | strip }} <i style="color: blue;">{{ item.title | strip | escape }}</i> {{ item.journal | strip }} <a href="{{ item.link }}" target="_blank"><i class="fas fa-solid fa-arrow-up-right-from-square" title="link to publication" style="color: blue;"></i></a></span>  
+        <span style="font-size: 16px;">{{ item.authors | strip }} <i>{{ item.title | strip | escape }}</i> {{ item.journal | strip }} <a href="{{ item.link }}" target="_blank" class="btn btn-primary"><i class="fas fa-solid fa-arrow-up-right-from-square" title="link to publication"></i></a></span>  
     </div>
   </div>
 {% endfor %}

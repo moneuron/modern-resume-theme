@@ -6,13 +6,10 @@
         <div class="card-header">
           <h4>{{ item.title }}</h4>
           {% if item.sub_title %}
-          <p><strong>{{ item.sub_title }}</strong></p>
+          <p class="subtitle">{{ item.sub_title }}</p>
           {% endif %}
           {% if item.caption %}
-          <p>{{ item.caption }}</p>
-          {% endif %}
-          {% if item.link %}
-          <a href="{{ item.link }}" class="btn btn-primary">{{ item.link_text | default: 'Read more' }}</a>
+          <p class="caption">{{ item.caption }}</p>
           {% endif %}
         </div>
         <div class="card-body">
@@ -21,8 +18,12 @@
           {% endif %}
           <p>{{ item.description }}</p>
         </div>
-        {% if item.additional_links %}
+        {% if item.link or item.additional_links %}
         <div class="card-footer">
+          {% if item.link %}
+          <a href="{{ item.link }}" class="btn btn-primary">{{ item.link_text | default: 'Read more' }}</a>
+          {% endif %}
+          {% if item.additional_links %}
           <ul class="additional-links">
             {% for link in item.additional_links %}
             <li>
@@ -32,6 +33,7 @@
             </li>
             {% endfor %}
           </ul>
+          {% endif %}
         </div>
         {% endif %}
       </div>

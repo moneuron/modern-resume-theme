@@ -21,7 +21,7 @@
         {% if item.link or item.additional_links %}
         <div class="card-footer">
           {% if item.link %}
-          <a href="{{ item.link }}" class="btn btn-primary">{{ item.link_text | default: 'Read more' }}</a>
+          <a href="{{ item.link }}" class="btn btn-primary">{{ item.link_text | default: 'Certificate' }}</a>
           {% endif %}
           {% if item.additional_links %}
           <ul class="additional-links">

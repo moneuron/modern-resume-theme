@@ -2,9 +2,9 @@
   {% for item in include.content %}
   <div class="publication">
     <div class="publication-details">
-      <span class="authors">{{ item.authors | strip }}</span>
-      <i class="publication-title">{{ item.title | strip | escape }}</i>
-      <span class="journal">{{ item.journal | strip }}</span>
+      <span class="authors" style="font-size: 18px;">{{ item.authors | strip }}</span>
+      <i class="publication-title" style="font-size: 20px;">{{ item.title | strip | escape }}</i>
+      <span class="journal" style="font-size: 16px;">{{ item.journal | strip }}</span>
       {% if item.link %}
       <a href="{{ item.link }}" class="external-link" target="_blank" title="Link to publication">
         <i class="fas fa-external-link-alt"></i>

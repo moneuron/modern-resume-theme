@@ -11,7 +11,7 @@
           {% if item.additional_links %}
           <ul class="additional-links">
             {% for link in item.additional_links %}
-            <li>
+            <li style="list-style-type: none;">
               <a href="{{ link.url }}" title="{{ link.title }}">
                 <i class="fas fa-external-link-alt"></i> {{ link.title }}
               </a>

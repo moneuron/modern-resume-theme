@@ -11,28 +11,28 @@
       <ul class="icons no-print">
         {%- if site.email -%}
           <li>
-            <a target="_blank" href="mailto:{{ site.email }}" class="button button--sacnite button--round-l">
+            <a title="Email" target="_blank" href="mailto:{{ site.email }}" class="button button--sacnite button--round-l">
               <i class="fa-solid fa-envelope" title="Email"></i>
             </a>
           </li>
         {%- endif -%}
         {%- if site.googlescholar_username -%}
           <li>
-            <a target="_blank" href="https://scholar.google.com/citations?user={{ site.googlescholar_username| escape }}" class="button button--sacnite button--round-l">
+            <a title="Google Scholar" target="_blank" href="https://scholar.google.com/citations?user={{ site.googlescholar_username| escape }}" class="button button--sacnite button--round-l">
               <i class="fa-brands fa-google-scholar" title="Google Scholar"></i>
             </a>
           </li>
         {%- endif -%}
         {%- if site.in_username -%}
           <li>
-            <a target="_blank" href="https://linkedin.com/in/{{ site.in_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
+            <a title="LinkedIn" target="_blank" href="https://linkedin.com/in/{{ site.in_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
               <i class="fa-brands fa-linkedin-in" title="LinkedIn"></i>
             </a>
           </li>
         {%- endif -%}
         {%- if site.github_username -%}
           <li>
-            <a target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
+            <a title="GitHub" target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
               <i class="fa-brands fa-github" title="GitHub"></i>
             </a>
           </li> 

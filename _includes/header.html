@@ -9,13 +9,6 @@
     </div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 header-left">
       <ul class="icons no-print">
-        {%- if site.medium_username -%}
-          <li>
-            <a title="Medium" target="_blank" href="https://medium.com/@{{ site.medium_username| escape }}" class="button button--sacnite button--round-l">
-              <i class="fa-brands fa-medium" title="Medium"></i>
-            </a>
-          </li>
-        {%- endif -%}
         {%- if site.email -%}
           <li>
             <a title="Email" target="_blank" href="mailto:{{ site.email }}" class="button button--sacnite button--round-l">
@@ -23,10 +16,10 @@
             </a>
           </li>
         {%- endif -%}
-        {%- if site.googlescholar_username -%}
+        {%- if site.medium_username -%}
           <li>
-            <a title="Google Scholar" target="_blank" href="https://scholar.google.com/citations?user={{ site.googlescholar_username| escape }}" class="button button--sacnite button--round-l">
-              <i class="fa-brands fa-google-scholar" title="Google Scholar"></i>
+            <a title="Medium" target="_blank" href="https://medium.com/@{{ site.medium_username| escape }}" class="button button--sacnite button--round-l">
+              <i class="fa-brands fa-medium" title="Medium"></i>
             </a>
           </li>
         {%- endif -%}

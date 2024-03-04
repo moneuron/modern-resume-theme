@@ -1,13 +1,12 @@
 <head>
+  <title>{{ site.name }}</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ site.meta_description }}">
   <meta name="author" content="{{ site.name }}">
   <meta name="robots" content="index, follow">
   <meta name="keywords" content="{{ site.meta_keyword1 }}, {{ site.meta_keyword2 }}, {{ site.meta_keyword3 }}, {{ site.meta_keyword4 }}, {{ site.meta_keyword5 }}">
-  
   <meta property="og:title" content="{{ site.name }}">
   <meta property="og:locale" content="en_US">
   <meta property="og:description" content="{{ site.meta_description }}">
@@ -17,6 +16,8 @@
   <meta property="og:image" content="{{ site.meta_img }}">
 
   <link rel="canonical" href="https://{{ site.meta_url }}/">
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
 
   <script type="application/ld+json">
   {
@@ -34,17 +35,4 @@
     "jobTitle": "{{ site.title }}"
   }
   </script>
-
-  <title>{{ site.name }}</title>
-
-  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
-  <link rel="apple-touch-icon" sizes="76x76" href="{{ '/apple-touch-icon.png' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
-  <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
-  <link rel="mask-icon" href="{{ '/safari-pinned-tab.svg' | relative_url }}" color="#5bbad5">
-  <meta name="apple-mobile-web-app-title" content="M. Shakiba">
-  <meta name="application-name" content="M. Shakiba">
-  <meta name="msapplication-TileColor" content="#2d89ef">
-  <meta name="theme-color" content="#ffffff">
 </head>

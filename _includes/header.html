@@ -9,6 +9,13 @@
     </div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 header-left">
       <ul class="icons no-print">
+        {%- if site.medium_username -%}
+          <li>
+            <a title="Medium" target="_blank" href="https://medium.com/@{{ site.medium_username| escape }}" class="button button--sacnite button--round-l">
+              <i class="fa-brands fa-medium" title="Medium"></i>
+            </a>
+          </li>
+        {%- endif -%}
         {%- if site.email -%}
           <li>
             <a title="Email" target="_blank" href="mailto:{{ site.email }}" class="button button--sacnite button--round-l">
@@ -36,13 +43,6 @@
               <i class="fa-brands fa-github" title="GitHub"></i>
             </a>
           </li> 
-        {%- endif -%}
-        {%- if site.medium_username -%}
-          <li>
-            <a title="Medium" target="_blank" href="https://medium.com/@{{ site.medium_username| escape }}" class="button button--sacnite button--round-l">
-              <i class="fa-brands fa-medium" title="Medium"></i>
-            </a>
-          </li>
         {%- endif -%}
       </ul>
     </div>

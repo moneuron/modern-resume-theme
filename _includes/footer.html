@@ -1,6 +1,5 @@
 <div class="container footer-container">
   <p>
-    {{ site.name | escape }} -
-    <a title="Email" href="mailto:{{ site.email }}" target="_blank">{{ site.email | escape }}</a>
+    {{ site.name | escape }} <a title="ORCiD" href="https://orcid.org/{{ site.orcid_username }}" target="_blank">({{ site.orcid_username | escape }})</a>
   </p>
 </div>

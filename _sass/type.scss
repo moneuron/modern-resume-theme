@@ -27,13 +27,15 @@ p {
   margin: 0 0 0.75rem; }
 
 a {
-  color: #477dca;
+  color: #3366cc;
   transition: color 150ms ease;
+  text-decoration: none;
+  background-color: transparent;
 }
 a:active,
 a:focus,
 a:hover {
-color: #355e98;
+color: #3366cc;
 }
 
 h1 {

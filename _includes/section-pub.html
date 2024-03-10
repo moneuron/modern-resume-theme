@@ -2,14 +2,14 @@
   {% for item in include.content %}
   <div class="publication">
     <div class="publication-details">
+      {% if item.link %}
+        <a href="{{ item.link }}" class="external-link" target="_blank" title="Link to publication">
+          <i class="fas fa-link"></i>
+        </a>
+      {% endif %}
       <span class="authors" style="font-size: 16px;">{{ item.authors | strip }}</span>
       <i class="publication-title" style="font-size: 16px;">{{ item.title | strip | escape }}</i>
       <span class="journal" style="font-size: 16px;">{{ item.journal | strip }} &nbsp;</span>
-      {% if item.link %}
-      <a href="{{ item.link }}" class="external-link" target="_blank" title="Link to publication">
-        <i class="fas fa-link"></i>
-      </a>
-      {% endif %}
     </div>
   </div>
   <br>

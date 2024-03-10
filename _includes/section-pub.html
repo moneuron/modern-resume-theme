@@ -7,9 +7,10 @@
           <i class="fas fa-link">&nbsp;</i>
         </a>
       {% endif %}
-      <span class="authors" style="font-size: 16px;">{{ item.authors | strip }}</span>
-      <i class="publication-title" style="font-size: 16px;">{{ item.title | strip | escape }}</i>
-      <span class="journal" style="font-size: 16px;">{{ item.journal | strip }}</span>
+      <span>{{ item.authors | strip }}</span>
+      <i style="font-size: 1.6rem;">{{ item.title | strip | escape }}</i>
+      <span style="font-size: 1.6rem;">{{ item.journal | strip }}</span>
+      <span style="color: #999; font-size: small;">{{ item.status | strip }}</span>
     </div>
   </div>
   <br>

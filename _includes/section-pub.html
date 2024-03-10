@@ -10,11 +10,6 @@
       <span style="font-size: 1.6rem;">{{ item.authors | strip }}</span>
       <i style="font-size: 1.6rem;">{{ item.title | strip | escape }}</i>
       <span style="font-size: 1.6rem;">{{ item.journal | strip }}</span>
-      {% if item.link %}
-      <span style="color: #999; font-size: small;">published</span>
-      {% else %}
-      <span style="color: #999; font-size: small;">under-review</span>
-      {% endif %}
     </div>
   </div>
   <br>

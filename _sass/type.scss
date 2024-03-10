@@ -28,9 +28,16 @@ p {
 
 a {
   color: #3366cc;
-  transition: color 150ms ease;
   text-decoration: none;
   background-color: transparent;
+}
+
+a:active,
+a:focus,
+a:hover {
+color: #3366cc;
+text-decoration: none;
+background-color: transparent;
 }
 
 h1 {

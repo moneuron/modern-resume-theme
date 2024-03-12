@@ -19,6 +19,7 @@ website_title: Web
 darkmode: never
 
 # Social links
+gate_username: jekyll
 twitter_username: jekyllrb
 X_username: jekyllrb
 github_username:  jekyll

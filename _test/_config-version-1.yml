@@ -9,6 +9,14 @@ email: test@email.com
 phone: 07845248563
 website: sproogen.github.io/modern-resume-theme
 
+givenName: jekyll
+familyName: jekyll
+additionalName: jekyll
+jobTitle: jekyll
+gender: Male
+affiliation: jekyll
+knowsAbout: jekyll
+
 # Social links
 gate_username: jekyll
 twitter_username: jekyllrb

@@ -21,8 +21,10 @@
   {
     "@context": "http://schema.org",
     "@type": "Person",
-    "name": "{{ site.name }}",
     "url": "https://{{ site.meta_url }}/",
+    "givenName": "{{ site.givenName }}",
+    "familyName": "{{ site.familyName }}",
+    "additionalName": "{{ site.additionalName }}",
     "image": "{{ site.meta_img }}",
     "sameAs": [
       "https://orcid.org/{{ site.orcid_username | escape }}/",
@@ -31,17 +33,12 @@
       "https://linkedin.com/in/{{ site.in_username | escape }}/",
       "https://www.researchgate.net/profile/{{ site.gate_username | escape }}/"
     ],
-    "jobTitle": "{{ site.title }}",
+    "jobTitle": "{{ site.jobTitle }}",
     "description": "{{ site.meta_description }}",
     "email": "{{ site.email }}",
-    "lastUpdate": "{{ site.last_update }}",
-    "keywords": [
-    "{{site.meta_keyword1}}",
-    "{{site.meta_keyword2}}",
-    "{{site.meta_keyword3}}",
-    "{{site.meta_keyword4}}",
-    "{{site.meta_keyword5}}"
-    ]
+    "gender": "{{ site.gender }}",
+    "affiliation": "{{ site.affiliation }}",
+    "knowsAbout": "{{ site.knowsAbout }}"
   }
   </script>
 </head>

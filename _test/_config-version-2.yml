@@ -15,6 +15,14 @@ phone_title: Phone
 website: sproogen.github.io/modern-resume-theme
 website_title: Web
 
+givenName: jekyll
+familyName: jekyll
+additionalName: jekyll
+jobTitle: jekyll
+gender: Male
+affiliation: jekyll
+knowsAbout: jekyll
+
 # Dark Mode (true/false/never)
 darkmode: never
 

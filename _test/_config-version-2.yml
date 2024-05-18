@@ -27,6 +27,7 @@ knowsAbout: jekyll
 darkmode: never
 
 # Social links
+wos_username: jekyll
 gate_username: jekyll
 twitter_username: jekyllrb
 X_username: jekyllrb

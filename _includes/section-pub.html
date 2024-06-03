@@ -3,8 +3,13 @@
   <div class="publication">
     <div class="publication-details">
       {% if item.link %}
-        <a href="{{ item.link }}" class="external-link" target="_blank" title="PDF link">
+        <a href="{{ item.link }}" class="external-link" target="_blank" title="Article">
           <i class="fas fa-link">&nbsp;</i>
+        </a>
+      {% endif %}
+      {% if item.pdf %}
+        <a href="{{ item.pdf }}" class="external-link" target="_blank" title="PDF">
+          <i class="fa-regular fa-file-lines">&nbsp;</i>
         </a>
       {% endif %}
       <span style="font-size: 1.6rem;">{{ item.authors | strip }}</span>

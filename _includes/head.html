@@ -26,28 +26,33 @@
 
   <script type="application/ld+json">
   {
-    "@context": "http://schema.org",
-    "@type": "Person",
-    "url": "https://{{ site.meta_url }}/",
-    "givenName": "{{ site.givenName }}",
-    "familyName": "{{ site.familyName }}",
-    "additionalName": "{{ site.additionalName }}",
-    "sameAs": [
-      "https://orcid.org/{{ site.orcid_username | escape }}",
-      "https://scholar.google.com/citations?user={{ site.googlescholar_username| escape }}",
-      "https://github.com/{{ site.github_username | escape }}",
-      "https://x.com/{{ site.X_username | escape }}",
-      "https://linkedin.com/in/{{ site.in_username | escape }}",
-      "https://www.researchgate.net/profile/{{ site.researchgate_username | escape }}",
-      "https://www.webofscience.com/wos/author/record/{{ site.wos_username | escape }}",
-      "https://www.scopus.com/authid/detail.uri?authorId={{ site.scopus_username | escape }}",
-      "https://neurotree.org/neurotree/peopleinfo.php?pid={{ site.neurotree_username | escape }}"
-    ],
-    "jobTitle": "{{ site.jobTitle }}",
-    "description": "{{ site.meta_description }}",
-    "gender": "{{ site.gender }}",
-    "affiliation": "{{ site.affiliation }}",
-    "knowsAbout": "{{ site.knowsAbout }}"
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "{{ site.name }}",
+      "alternateName": "{{ site.alternateName }}",
+      "identifier": "{{ site.orcid_username }}",
+      "description": "{{ site.meta_description }}",
+      "sameAs": [
+        "https://orcid.org/{{ site.orcid_username | escape }}",
+        "https://scholar.google.com/citations?user={{ site.googlescholar_username| escape }}",
+        "https://github.com/{{ site.github_username | escape }}",
+        "https://x.com/{{ site.X_username | escape }}",
+        "https://linkedin.com/in/{{ site.in_username | escape }}",
+        "https://www.researchgate.net/profile/{{ site.researchgate_username | escape }}",
+        "https://www.webofscience.com/wos/author/record/{{ site.wos_username | escape }}",
+        "https://www.scopus.com/authid/detail.uri?authorId={{ site.scopus_username | escape }}",
+        "https://neurotree.org/neurotree/peopleinfo.php?pid={{ site.neurotree_username | escape }}"
+      ],
+      "jobTitle": "{{ site.jobTitle }}",
+      "gender": "{{ site.gender }}",
+      "affiliation": {
+        "@type": "{{ site.affiliation_type }}",
+        "name": "{{ site.affiliation }}"
+      },
+      "knowsAbout": "{{ site.knowsAbout }}"
+    }
   }
   </script>
 </head>

@@ -1,5 +1,5 @@
 <div class="container footer-container">
   <p>
-    {{ site.name | escape }} <a title="ORCiD" href="https://orcid.org/{{ site.orcid_username }}" target="_blank">({{ site.orcid_username | escape }})</a>
+    <a title="{{ site.meta_url }}" href="https://{{ site.meta_url }}/">{{ site.meta_url | escape }}</a>
   </p>
 </div>

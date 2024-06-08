@@ -12,11 +12,11 @@
           <i class="fa-regular fa-file-pdf">&nbsp;</i>
         </a>
       {% endif %}
-      <span style="font-size: 1.6rem;">{{ item.authors | strip }}</span>
-      <span style="font-size: 1.6rem;">{{ item.title | strip | escape }}</span>
-      <span style="font-size: 1.6rem;">{{ item.journal | strip }}</span>
-      <span style="font-size: 1.6rem;">{{ item.year | strip }}</span>
-      <span style="font-size: 1.6rem;">doi:&nbsp;{{ item.doi | strip }}</span>
+      <span>{{ item.authors | strip }}</span>
+      <span>{{ item.title | strip | escape }}</span>
+      <span>{{ item.journal | strip }}</span>
+      <span>{{ item.year | strip }}</span>
+      <span >doi:&nbsp;{{ item.doi | strip }}</span>
     </div>
   </div>
   <br>

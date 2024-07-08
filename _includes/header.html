@@ -22,17 +22,17 @@
         {%- endif -%}
         {%- if site.in_username -%}
           <li>
-            <a title="LinkedIn" target="_blank" href="https://linkedin.com/in/{{ site.in_username| cgi_escape | escape }}/" class="button button--sacnite button--round-l">
+            <a title="LinkedIn" target="_blank" href="https://linkedin.com/in/{{ site.in_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
               <i class="fa-brands fa-linkedin-in" title="LinkedIn"></i>
             </a>
           </li>
         {%- endif -%}
         {%- if site.X_username -%}
           <li>
-            <a title="X" target="_blank" href="https://x.com/{{ site.X_username| cgi_escape | escape }}/" class="button button--sacnite button--round-l">
-              <i class="fa-brands fa-x-twitter" title="X"></i>
+            <a title="GitHub" target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
+              <i class="fa-brands fa-github" title="GitHub"></i>
             </a>
-          </li> 
+          </li>
         {%- endif -%}
       </ul>
     </div>

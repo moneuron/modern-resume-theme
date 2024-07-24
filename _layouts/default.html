@@ -6,6 +6,7 @@
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
       {%- include about.html -%}
+      {%- include papers.html -%}
         {% for section in site.content %}
           <div class="container {{ section.layout }}-container">
             <h3 id="{{ section.title | slugify }}"></h3>

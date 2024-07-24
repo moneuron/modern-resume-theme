@@ -18,7 +18,7 @@
       {% if item.year %}
       <span>{{ item.year | strip }}</span>
       {% endif %}
-      {% item.doi %}
+      {% if item.doi %}
       <span >doi:&nbsp;{{ item.doi | strip }}</span>
       {% endif %}
     </div>

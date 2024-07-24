@@ -4,5 +4,9 @@
       <i style="font-size: 12px;">(Last Update: {{ site.last_update }})</i>
         {{ site.about_content | strip | markdownify }}
     </div>
+    <h3></h3>
+    <div class="col-xs-12">
+        {{ site.papers | strip | markdownify }}
+    </div>
   </div>
 </div>

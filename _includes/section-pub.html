@@ -15,8 +15,12 @@
       <span>{{ item.authors | strip }}</span>
       <span>{{ item.title | strip | escape }}</span>
       <span>{{ item.journal | strip }}</span>
+      {% if item.year %}
       <span>{{ item.year | strip }}</span>
+      {% endif %}
+      {% item.doi %}
       <span >doi:&nbsp;{{ item.doi | strip }}</span>
+      {% endif %}
     </div>
   </div>
   <br>

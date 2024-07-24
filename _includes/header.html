@@ -6,10 +6,10 @@
     </div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 header-right">
       <ul class="icons no-print">
-        {%- if site.email -%}
+        {%- if site.bluesky_username -%}
           <li>
-            <a title="Email" target="_blank" href="mailto:{{ site.email }}" class="button button--sacnite button--round-l">
-              <i class="fa-solid fa-envelope" title="Email"></i>
+            <a title="Bluesky" target="_blank" href="https://bsky.app/profile/{{ site.bluesky_username | escape }}" class="button button--sacnite button--round-l">
+              <i class="fa-brands fa-bluesky" title="GoogleScholar"></i>
             </a>
           </li>
         {%- endif -%}

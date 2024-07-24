@@ -4,37 +4,5 @@
       <h1>{{ site.name | escape }}</h1>
       <h2>{{ site.email | escape }}</h2>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 header-right">
-      <ul class="icons no-print">
-        {%- if site.googlescholar_username -%}
-          <li>
-            <a title="GoogleScholar" target="_blank" href="https://scholar.google.com/citations?user={{ site.googlescholar_username | escape }}" class="button button--sacnite button--round-l">
-              <i class="fa-brands fa-google-scholar" title="GoogleScholar"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if site.in_username -%}
-          <li>
-            <a title="LinkedIn" target="_blank" href="https://linkedin.com/in/{{ site.in_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fa-brands fa-linkedin-in" title="LinkedIn"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if site.github_username -%}
-          <li>
-            <a title="GitHub" target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
-              <i class="fa-brands fa-github" title="GitHub"></i>
-            </a>
-          </li>
-        {%- endif -%}
-        {%- if site.discord_username -%}
-          <li>
-            <a title="Discord" target="_blank" href="https://discordapp.com/users/UserID/{{ site.discord_username | escape }}" class="button button--sacnite button--round-l">
-              <i class="fa-brands fa-discord" title="Discord"></i>
-            </a>
-          </li>
-        {%- endif -%}
-      </ul>
-    </div>
   </div>
 </div>

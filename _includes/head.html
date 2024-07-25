@@ -18,10 +18,11 @@
       "name": "{{ site.name }}",
       "description": "{{ site.meta_description }}",
       "sameAs": [
-        "https://scholar.google.com/citations?user={{ site.googlescholar_username| escape }}",
         "https://github.com/{{ site.github_username | escape }}",
         "https://linkedin.com/in/{{ site.in_username | escape }}",
-        "https://www.researchgate.net/profile/{{ site.researchgate_username | escape }}"
+        "https://scholar.google.com/citations?user={{ site.googlescholar_username| escape }}",
+        "https://www.researchgate.net/profile/{{ site.researchgate_username | escape }}",
+        "https://orcid.org/{{ site.orcid_username | escape }}",
       ]
     }
   }

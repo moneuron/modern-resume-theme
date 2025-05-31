@@ -18,10 +18,10 @@
         .then(res => res.json())
         .then(data => {
           const count = data.message['is-referenced-by-count'];
-          el.textContent = `[CITATIONS: ${count}]`;
+          el.textContent = `- CITATIONS: ${count} -`;
         })
         .catch(() => {
-          el.textContent = '[CITATIONS: NA]';
+          el.textContent = '';
         });
     });
   </script>

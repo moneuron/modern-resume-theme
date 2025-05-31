@@ -12,21 +12,19 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
   <script>
-    const papers = [
-      { id: "srep-meta", doi: "10.1038/s41598-024-62747-z" },
-      { id: "hel-cuonp", doi: "10.1016/j.heliyon.2024.e31414" }
-    ];
+    document.querySelectorAll('.citation[data-doi]').forEach(el => {
+      const doi = el.getAttribute('data-doi');
+      const id = el.id;
   
-    papers.forEach(paper => {
-      const url = `https://api.crossref.org/works/${encodeURIComponent(paper.doi)}`;
+      const url = `https://api.crossref.org/works/${encodeURIComponent(doi)}`;
       fetch(url)
         .then(res => res.json())
         .then(data => {
           const count = data.message['is-referenced-by-count'];
-          document.getElementById(paper.id).textContent = `[CITATIONS: ${count}]`;
+          el.textContent = `[CITATIONS: ${count}]`;
         })
         .catch(() => {
-          document.getElementById(paper.id).textContent = '[CITATIONS: NA]';
+          el.textContent = '[CITATIONS: NA]';
         });
     });
   </script>

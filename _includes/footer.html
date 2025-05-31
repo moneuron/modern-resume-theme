@@ -6,4 +6,21 @@
         {{ site.links | strip | markdownify }}
     </div>
   </div>
+  <script>
+    document.querySelectorAll('.citation[data-doi]').forEach(el => {
+      const doi = el.getAttribute('data-doi');
+      const id = el.id;
+  
+      const url = `https://api.crossref.org/works/${encodeURIComponent(doi)}`;
+      fetch(url)
+        .then(res => res.json())
+        .then(data => {
+          const count = data.message['is-referenced-by-count'];
+          el.textContent = `[CITATIONS: ${count}]`;
+        })
+        .catch(() => {
+          el.textContent = '[CITATIONS: NA]';
+        });
+    });
+  </script>
 </div>

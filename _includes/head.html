@@ -11,4 +11,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  <script>
+    const papers = [
+      { id: "citation-count-meta", doi: "10.1038/s41598-024-62747-z" },
+      { id: "citation-count-heliyon", doi: "10.1016/j.heliyon.2024.e31414" }
+    ];
+  
+    papers.forEach(paper => {
+      const url = `https://api.crossref.org/works/${encodeURIComponent(paper.doi)}`;
+      fetch(url)
+        .then(res => res.json())
+        .then(data => {
+          const count = data.message['is-referenced-by-count'];
+          document.getElementById(paper.id).textContent = `Citation Count: ${count}`;
+        })
+        .catch(() => {
+          document.getElementById(paper.id).textContent = 'Citation data unavailable';
+        });
+    });
+  </script>
 </head>

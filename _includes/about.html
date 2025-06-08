@@ -1,21 +1,11 @@
 <div class="container">
-  <mo></mo>
+  <div class="mo"></div>
   <div class="row clearfix">
     <div class="col-xs-12">
         {{ site.papers | strip | markdownify }}
     </div>
   </div>
 </div>
-{% if site.conferences %}
-<div class="container">
-  <h3></h3>
-  <div class="row clearfix">
-    <div class="col-xs-12">
-        {{ site.conferences | strip | markdownify }}
-    </div>
-  </div>
-</div>
-{%- endif %}
 <div class="container footer-container">
     {{ site.social | strip | markdownify }}
 </div>

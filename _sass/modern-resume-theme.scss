@@ -1,5 +1,4 @@
 @import "base";
-@import "button";
 @import "type";
 
 .header-right p {
@@ -137,12 +136,6 @@
 
 .footer-container p {
   text-align: center;
-  font-weight: 300;
-  font-size: 1.4rem;
-}
-
-.footer-container a {
-  color: inherit;
   font-weight: 300;
   font-size: 1.4rem;
 }

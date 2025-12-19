@@ -1,7 +1,10 @@
 // Bootstrap 3.3.5 Grid System - Minimal Version
 // Contains only the grid system components used in modern-resume-theme
 
-// Box sizing - already applied to html in base.scss, extend to all elements
+// Box sizing - Bootstrap standard approach
+// This ensures all elements inherit border-box sizing, which is required for 
+// the grid system to work correctly. The base.scss file already sets box-sizing
+// on html element; this extends it to all elements as per Bootstrap convention.
 *,
 *:before,
 *:after {

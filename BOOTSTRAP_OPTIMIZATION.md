@@ -313,7 +313,7 @@ Once you've extracted the necessary Bootstrap CSS:
 
 ## Benefits of This Approach
 
-- **Reduced file size**: Bootstrap 3.3.5 full CSS is ~120KB minified. The grid-only version is ~10-15KB
+- **Reduced file size**: Bootstrap 3.3.5 full CSS is ~121KB minified. The grid-only version is ~2.5KB (98% reduction)
 - **Faster page load**: Smaller CSS file means faster download and parsing
 - **Better performance**: Less CSS for the browser to process
 - **More control**: You have the exact CSS rules in your codebase

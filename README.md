@@ -16,7 +16,7 @@ A modern, responsive resume/CV theme built with Jekyll.
 
 This theme has been optimized to use only the Bootstrap CSS rules that are actually needed, rather than loading the entire Bootstrap library. This results in:
 
-- **~90% reduction in CSS file size** (from ~120KB to ~10-15KB)
+- **~98% reduction in CSS file size** (from ~121KB to ~2.5KB)
 - **Faster page load times**
 - **Better performance**
 - **No external CDN dependencies**
@@ -25,7 +25,7 @@ This theme has been optimized to use only the Bootstrap CSS rules that are actua
 
 Instead of loading the full Bootstrap CSS from a CDN:
 ```html
-<!-- OLD: Full Bootstrap (120KB) -->
+<!-- OLD: Full Bootstrap (~121KB minified) -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 ```
 
@@ -34,6 +34,8 @@ This theme now includes only the Bootstrap grid system classes that are actually
 - Row and clearfix utilities
 - Column classes (col-xs-*, col-sm-*, col-md-*, col-lg-*)
 - Print-specific column classes
+
+The result is a tiny ~2.5KB of Bootstrap CSS instead of ~121KB.
 
 ### Learn More
 

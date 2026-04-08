@@ -39,34 +39,24 @@ body {
 
 /* Email Badge Styles */
 .email-badge {
+  font-family: monospace,monospace;
   display: inline-block;
-  font-size: 1.3rem;          /* Slightly larger than your base text */
+  font-size: 100%;        
   font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 30px;         /* Pill shape – adjust as desired */
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  padding: 2px 4px;
+  border-radius: 4px;       
   line-height: 1;
   transition: all 0.2s ease;
 }
 
 .email-badge-active {
-  background-color: #1d70b8;   /* Blue – match your link color or choose another */
+  background-color: #1d70b8; 
   color: white;
   border: 1px solid #1d70b8;
 }
 
 .email-badge-inactive {
-  background-color: #6c757d;   /* Neutral gray */
+  background-color: #6c757d;
   color: white;
   border: 1px solid #6c757d;
-}
-
-/* Optional: hover effect */
-.email-badge-active:hover {
-  background-color: #155a9e;
-}
-
-.email-badge-inactive:hover {
-  background-color: #5a6268;
 }

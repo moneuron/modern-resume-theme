@@ -1,7 +1,7 @@
 body {
   color: #333;
   font-family: "Albert Sans", sans-serif;
-  font-feature-settings: "kern", "liga", "pnum";
+  font-feature-settings: "kern" 1, "liga" 1, "pnum" 1;
   font-size: 1rem;
   line-height: 1.5;
 
@@ -53,7 +53,7 @@ h2 {
 
 p, ul {
   font-size: 1.6rem;
-  text-align: justify;
+  text-align: left;
   font-weight: 500;
 }
 
@@ -64,7 +64,7 @@ a i {
 
 span {
   font-size: 1.6rem;
-  text-align: justify;
+  text-align: left;
   font-weight: 500;
 }
 
@@ -90,4 +90,11 @@ hr {
 
 blockquote {
 	border-left: 2px solid #1d3445;
+  margin-top: 1.5rem;
+}
+
+nav {
+  font-size: 75%;
+  line-height: 0;
+  display: inline;
 }

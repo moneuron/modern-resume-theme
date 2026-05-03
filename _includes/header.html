@@ -2,7 +2,7 @@
   <div class="row" style="display: flex; align-items: center;">
     <div class="col-xs-12 header-left">
       <h1>{{ site.name | escape }}</h1>
-      {{ site.about_content | strip }}
+      {{ site.about_content | strip | markdownify }}
     </div>
   </div>
 </div>
